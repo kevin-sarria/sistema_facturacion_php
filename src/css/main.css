@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.titulo {
+    @apply text-2xl text-indigo-500;
+}
