@@ -1,0 +1,18 @@
+{
+    "name": "sarria/sistema_facturacion_php",
+    "description": "Sistema de facturacion para la Papeleria Universal",
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kevin Sarria",
+            "email": "reysabueso256@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,15 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilo.css">
-    <title>Sistema Facturacion</title>
-</head>
-<body>
+<?php
 
-    <h1 class="titulo">Hello World!</h1>
-    
-</body>
-</html>
+require_once __DIR__ . '/includes/app.php';
+
+use MVC\Router;
+use Controllers\AuthController;
+use Controllers\DashboardController;
+use Controllers\NotFoundController;
+
+$router = new Router();
+
+// Login
+$router->get('/', [AuthController::class, 'login']);
+$router->post('/', [AuthController::class, 'login']);
+$router->get('/crear-super-usuario', [AuthController::class, 'createSuperAdmin']);
+$router->post('/crear-super-usuario', [AuthController::class, 'createSuperAdmin']);
+
+// Admin
+$router->get('/admin/dashboard', [DashboardController::class, 'index']);
+$router->get('/admin/inventario', [DashboardController::class, 'inventario']);
+
+// No se encuentra la ruta
+$router->get('/404', [NotFoundController::class, 'index']);
+
+
+$router->comprobarRutas();
+
+?>

@@ -2,6 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
-.titulo {
-    @apply text-2xl text-indigo-500;
+
+
+/* Helpers */
+.contenedor {
+    @apply w-10/12 mx-auto;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
+
+/* Iniciar Sesion */
+.auth {
+    @apply flex flex-col items-center justify-center h-screen;
+}
+
+.formulario__container {
+    @apply text-center p-5 w-80 sm:w-96;
+}
+
+.formulario__heading {
+    @apply text-6xl text-indigo-600 font-semibold uppercase mb-16;
+}
+
+.formulario__campo {
+    @apply mb-5;
+}
+
+.formulario__campo input:not([type="submit"]) {
+    @apply w-full bg-gray-200 p-3 rounded-sm;
+}
+
+.formulario__links {
+    @apply text-right mb-5 text-indigo-600 hover:text-indigo-700;
+}
+
+.formulario__submit {
+    @apply w-full text-xl p-3 rounded-sm bg-indigo-600 text-white hover:bg-indigo-700 cursor-pointer;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
+
+/* Dashboard */
+.dashboard {
+    @apply w-screen h-screen;
+}
+
+.dashboard__contenido {
+    @apply p-10 w-full h-screen overflow-auto;
+}
+
+.dashboard__contenido--header {
+    @apply flex flex-col sm:flex-row gap-5 sm:gap-2 items-center text-blue-600 font-semibold text-4xl mb-10;
+}
+
+.dashboard__contenido--header .icon-menu {
+    @apply flex flex-wrap gap-2 items-center justify-center w-14 h-14 p-2 border border-blue-500 rounded hover:cursor-pointer;
+}
+
+.dashboard__contenido--header .icon-menu .square {
+    @apply w-3 h-3 bg-blue-500 p-0 m-0;
+}
+
+.dashboard-sidebar {
+    @apply fixed -translate-x-full lg:flex bg-white;
+}
+
+.sidebar-active {
+    @apply w-full md:w-4/12 lg:w-3/12 flex flex-col items-center h-screen shadow-2xl px-3 pt-5 translate-x-0 transition-transform duration-500;
+}
+
+.icon-close-menu {
+    @apply absolute right-5 top-10;
+}
+
+.icon-close-menu .line {
+    @apply w-10 h-1 bg-red-600 hover:cursor-pointer;
+}
+
+.icon-close-menu .line:first-child {
+    @apply rotate-45;
+}
+
+.icon-close-menu .line:last-child {
+    @apply -rotate-45 -translate-y-1;
+}
+
+.dashboard-sidebar__user {
+    @apply flex flex-col gap-y-3 items-center w-4/5;
+}
+
+.dashboard-sidebar__user img {
+    @apply w-2/4;
+}
+
+.dashboard-sidebar__links {
+    @apply flex flex-col items-center w-4/5;
+}
+
+.dashboard-sidebar__links--link {
+    @apply flex justify-center gap-x-2 my-5 p-3 text-gray-600 w-4/5;
+}
+
+.dashboard-sidebar__links--link a {
+    @apply text-lg;
+}
+
+.link-active {
+    @apply border border-blue-600 rounded text-blue-600;
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
+
+/* Page Not Found */
+.not-found {
+    @apply w-screen h-screen flex flex-col items-center justify-center gap-3 p-3;
+}
+
+.not-found__img {
+    @apply lg:w-4/12;
+}
+
+.not-found__title {
+    @apply text-red-500 text-xl md:text-4xl text-center font-bold;
+}
+
+.not-found__paragraph {
+    @apply text-gray-500 text-base md:text-xl text-center font-semibold;
 }
